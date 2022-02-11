@@ -1,0 +1,4 @@
+.infodiv{
+    display: flex;
+    justify-content: space-between;
+}

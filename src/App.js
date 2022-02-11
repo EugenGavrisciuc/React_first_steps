@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+import SearchBar from "./components/SearchBar/SearchBar"
+import SearchButton from "./components/buttons/SearchButton";
+import Infodiv from "./components/info/Infodiv";
+import InfoTable from "./components/text-description/TEXT_DESCRIPTION"
+import "bootstrap/dist/css/bootstrap.css"
+import "./components/containerstyles.css"
+import styled from "styled-components";
 import './App.css';
+// import "./components/searchbar.css";
+
+const TextAlign = styled.div`
+    margin: 5px;
+    `
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+      <div className="bodySize">
+          <Infodiv name={"Nume Prenume"} listsNumber={5} liked={0}/>
+          <div className="container">
+            <SearchBar inputtext={"Search"}/>
+            <SearchButton name={"Submit"}/>
+            <SearchButton name={"Clear"}/>
+          </div>
+            <InfoTable textTitle/>
+            <InfoTable/>
+            <InfoTable/>
+          <div className="container spaceel">
+            <SearchBar inputtext={"What element would you like to add?"}/>
+            <SearchButton name={"Add"}/>
+          </div>
+        </div>
+
+      </div>
   );
 }
 

@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.bodySize {
+    width: 400px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(228, 248, 255);
+}
+
+.spaceel {
+    padding: 5px;
+}

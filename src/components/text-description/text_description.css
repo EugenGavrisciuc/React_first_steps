@@ -1,0 +1,18 @@
+.textdesc{
+    display: flex;
+    justify-content: space-between;
+}
+
+.yellow{
+    color: yellow;
+}
+
+.default_text_option{
+    margin: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.buttonDist{
+    margin: 5px;
+}
