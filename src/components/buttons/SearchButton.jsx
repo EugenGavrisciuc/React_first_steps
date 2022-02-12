@@ -7,7 +7,9 @@ const SearchButton = (props) => {
         <div>
             <Button
             className="btnstyle"
-            type="submit">{props.name}</Button>
+            type="submit"
+            onClick={props.additm}
+            >{props.name}</Button>
         </div>
     );
 };

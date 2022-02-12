@@ -6,12 +6,10 @@ export default class InfoTable extends Component{
     constructor(props){
         super(props);
         this.state = {
-            textTitle: "Hello",
-            isFav: false
-        }
+            isFav: this.props.isFav
+        };
         this.add_to_fav = () => {
                 this.setState(({isFav})=> ({
-                    textTitle: "Test",
                     isFav: !isFav
                 }));
         }
@@ -19,13 +17,15 @@ export default class InfoTable extends Component{
     };
 
     render(){
-        const {textTitle, isFav} = this.state;
+        const   {isFav} = this.state,
+                {delFunc, textname, idx} = this.props;
+
         return (
             <div className='textdesc'>
-                <div className={`default_text_option ${isFav ? "yellow": ""}`}>{textTitle}</div>
+                <div className={`default_text_option ${isFav ? "yellow": ""}`}>{textname}</div>
                 <div>
                     <Button className="buttonDist" outline type="button" onClick={this.add_to_fav}>Favorite</Button>
-                    <Button className="buttonDist" type="button">Delete</Button>
+                    <Button className="buttonDist" type="button" onClick={() => delFunc(idx)}>Delete</Button>
                 </div>
             </div>
             );
