@@ -5,7 +5,7 @@ const Infodiv = (props) => {
     return (
         <div className="infodiv">
             <div>{props.name}</div>
-            <div>{props.listsNumber} posts, and you liked {props.liked}</div>
+            <div>{props.listsNumber} posts, and number of favorited {props.liked}</div>
         </div>
     );
 };

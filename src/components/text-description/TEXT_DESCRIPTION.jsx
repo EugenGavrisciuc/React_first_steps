@@ -13,19 +13,20 @@ export default class InfoTable extends Component{
                     isFav: !isFav
                 }));
         }
-        
+
     };
 
     render(){
         const   {isFav} = this.state,
-                {delFunc, textname, idx} = this.props;
+                {delFunc, textname, idx, addFav} = this.props;
+        const boolval = isFav ? true : false;
 
         return (
             <div className='textdesc'>
                 <div className={`default_text_option ${isFav ? "yellow": ""}`}>{textname}</div>
                 <div>
-                    <Button className="buttonDist" outline type="button" onClick={this.add_to_fav}>Favorite</Button>
-                    <Button className="buttonDist" type="button" onClick={() => delFunc(idx)}>Delete</Button>
+                    <Button className="buttonDist" outline={boolval} type="button" onClick={() => {this.add_to_fav(); addFav(idx);}}>Favorite</Button>
+                    <Button className="buttonDist " type="button" onClick={() => delFunc(idx)}>Delete</Button>
                 </div>
             </div>
             );
